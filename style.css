@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 20px;
+    font-family:"Montserrat", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#hero{
+    background-image: url(./img/20180519_155144.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .6;
+    z-index: -1;
+}
+
+#hero .hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50 px;
+    justify-content: center;
+}
+
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 2rem;
+    position: relative;
+    color: #F9FA0F;
+}
+
+#hero h2{
+    display: block;
+    width: fit-content;
+    font-size: 1rem;
+    position: relative;
+    color: white;
+}
+
+#hero .piros{
+    color: #FF0000;
+}
+
+#hero .call{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #FF0000;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+#hero .call:hover{
+    color: white;
+    background-color: #FF0000;
+}
+
+#service{
+    background-color: #F9FA0F;
+}
+
+#service .service{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#service .service-title{
+    font-size: 3rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+#services .service-top p{
+font-size: 1.4rem;
+margin-top: 5px;
+line-height: 2.5rem;
+font-weight: 300px;
+letter-spacing: .05rem;
+margin: 10px 5%;
+}
+
+#service .service-bottom{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#service .service-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 10px 5%;
+}
+
+#service .service-bottom .icon {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+#service .service-item h3{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: black
+}
+
+#service service-item p{
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.9rem;
+    color: black;
+}
