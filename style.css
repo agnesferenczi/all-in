@@ -28,6 +28,25 @@ img{
     object-fit: cover;
 }
 
+p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.9rem;
+    color: black;
+    letter-spacing: .05rem;
+    margin-top: 5px;
+}
+
+.section-title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #FF0000;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
 #hero{
     background-image: url(./img/20180519_155144.jpg);
     background-size: cover;
@@ -73,6 +92,7 @@ img{
 
 #hero .piros{
     color: #FF0000;
+    text-align: left;
 }
 
 #hero .call{
@@ -107,9 +127,9 @@ img{
 }
 
 #service .service-title{
-    font-size: 3rem;
-    font-weight: 300;
-    color: black;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #FF0000;
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: .2rem;
@@ -117,18 +137,19 @@ img{
 }
 
 #services .service-top p{
-font-size: 1.4rem;
-margin-top: 5px;
-line-height: 2.5rem;
-font-weight: 300px;
-letter-spacing: .05rem;
-margin: 10px 5%;
+    font-size: 1rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300px;
+    letter-spacing: .05rem;
+    margin: 10px 5%;
 }
 
 #service .service-bottom{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 50px;
 }
 
 #service .service-item{
@@ -139,6 +160,7 @@ margin: 10px 5%;
     flex-direction: column;
     border-radius: 10px;
     margin: 10px 5%;
+    overflow: hidden;
 }
 
 #service .service-bottom .icon {
@@ -148,15 +170,189 @@ margin: 10px 5%;
 }
 
 #service .service-item h3{
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 10px;
     text-transform: uppercase;
     color: black
 }
 
-#service service-item p{
+#service .service-item p{
     text-align: left;
     font-size: 1rem;
     line-height: 1.9rem;
     color: black;
 }
+
+#references .references {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#references .references-header h3{
+    margin-bottom: 30px;
+    color: black;
+}
+
+#references .all-references{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#references .references-item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#references .references-info{
+    padding: 38px;
+    flex-basis: 50%;
+    background-color: #F9FA0F;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#references .references-info h3{
+    font-size: 1rem;
+    color: #FF0000;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+#references .references-info h4{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+#references .references-info p{
+    text-align: left;
+}
+
+#references .references-img{
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+#references .references-img:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .6;
+}
+
+#references .references-img img{
+    transition: .3s ease transform;
+}
+
+#references .references-item:hover .references-img img{
+    transform: scale(1.1);
+    /* Ezt jó lenne megfixelni - opacity: 1;*/
+}
+
+#bemutat .bemutat-container{
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    padding: 300px 20px;
+    background-color: #F9FA0F;
+    width: 100%;
+}
+
+#bemutat .bemutat-container{
+    width: 100%;
+    background-color: #F9FA0F;
+}
+#bemutat .bemutat-container h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: .2rem;
+}
+
+#bemutat .bemutat-container h4{
+    text-align: center;
+    margin-bottom: 50;
+    /* Ezt nem műküdik margin-bottom: 50px; */
+}
+
+#bemutat .bemutat-container p{
+    text-align: center;
+}
+
+#contact .contact{
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #4E4949;
+}
+
+#contact .section-title{
+    color: white;
+    margin: 50px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: .2rem;
+}
+
+
+#contact .contact-item{
+    width: 100%;
+}
+
+#contact .contact-item{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border: 2px solid #FF0000;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact .contact-item:hover{
+    color: white;
+    background-color: #FF0000;
+}
+
+#contact .contact-item{
+    width: 400px;
+}
+
+#contact .icon{
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#contact .contact-info h3{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#contact .contact-info h3{
+    font-size: 0.7rem;
+    font-weight: 500;
