@@ -47,6 +47,16 @@ p {
     text-align: center;
 }
 
+.brand h3{
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: black;
+}
+
+.brand h3 span{
+    color: #FF0000;
+}
+
 #hero{
     background-image: url(./img/20180519_155144.jpg);
     background-size: cover;
@@ -80,6 +90,8 @@ p {
     font-size: 2rem;
     position: relative;
     color: #F9FA0F;
+    text-align: left;
+    margin: 20px;
 }
 
 #hero h2{
@@ -88,6 +100,8 @@ p {
     font-size: 1rem;
     position: relative;
     color: white;
+    text-align: center;
+    margin: 20px;
 }
 
 #hero .piros{
@@ -107,6 +121,7 @@ p {
     margin-top: 30px;
     transition: .3s ease;
     transition-property: background-color, color;
+    margin: 20px;
 }
 
 #hero .call:hover{
@@ -148,6 +163,7 @@ p {
 #service .service-bottom{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     margin-top: 50px;
 }
@@ -158,8 +174,10 @@ p {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 30px;
     border-radius: 10px;
     margin: 10px 5%;
+    position: relative;
     overflow: hidden;
 }
 
@@ -226,15 +244,13 @@ p {
 #references .references-info h3{
     font-size: 1rem;
     color: #FF0000;
-    margin-bottom: 10px;
     font-weight: 500;
 }
 
 #references .references-info h4{
     font-size: 1rem;
     font-weight: 500;
-    margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 #references .references-info p{
@@ -313,13 +329,12 @@ p {
     letter-spacing: .2rem;
 }
 
-
-#contact .contact-item{
-    width: 100%;
+#contact .contact-items{
+    width: 400px;
 }
 
 #contact .contact-item{
-    width: 100%;
+    width: 80%;
     padding: 20px;
     text-align: center;
     color: white;
@@ -337,9 +352,6 @@ p {
     background-color: #FF0000;
 }
 
-#contact .contact-item{
-    width: 400px;
-}
 
 #contact .icon{
     width: 70px;
@@ -356,3 +368,82 @@ p {
 #contact .contact-info h3{
     font-size: 0.7rem;
     font-weight: 500;
+}
+
+#footer{
+    background-color: #F9FA0F;
+}
+
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#footer .social-item{
+    height: 20px;
+    width: 20px;
+    margin-bottom: 0 5px;
+}
+
+#footer p{
+    color: black;
+    font-size: 0.5rem;
+}
+
+/* Reszponzivitás - Tabletnek (betűméreteket nem állítottam át)*/
+
+@media only screen and (min-width: 768px){
+
+#service .service-bottom .service-item{
+    flex-basis: 45%;
+    margin: 2.5%;
+}
+
+#references .references{
+    padding-bottom: 0;
+}
+
+#references .references-item{
+    flex-direction: row;
+}
+
+#references .references-item:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+#references .references-item{
+    height: 400px;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+}
+
+#references .all-references .references-info{
+    height: 100%;
+    margin: 0;
+}
+#references .all-references .references-img{
+    height: 100%;
+    margin: 0;
+}
+
+#contact .contact{
+    flex-direction: column;
+    padding: 100px 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#contact .contact-items{
+    width: 100%;
+    display: flex;
+    flex-direction: inline;
+}
