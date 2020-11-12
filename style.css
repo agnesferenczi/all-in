@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 20px;
-    font-family:"Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.container{
+.container {
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -22,7 +22,7 @@ a{
     justify-content: center;
 }
 
-img{
+img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -37,7 +37,7 @@ p {
     margin-top: 5px;
 }
 
-.section-title{
+.section-title {
     font-size: 1.5rem;
     font-weight: 500;
     color: #FF0000;
@@ -47,17 +47,80 @@ p {
     text-align: center;
 }
 
-.brand h3{
+.brand h3 {
     font-size: 1rem;
     text-transform: uppercase;
     color: black;
 }
 
-.brand h3 span{
+.brand h3 span {
     color: #FF0000;
 }
 
-#hero{
+#header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+
+#header .header {
+    min-height: 8vh;
+    background-color: rgb(31, 30, 30, 0.24)
+}
+
+.header .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+}
+
+#header .nav-list ul {
+    list-style: none;
+    position: absolute;
+    background-color: rgb(31, 30, 30);
+    width: 100vh;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+#header .nav-list ul a {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+
+#header .nav-list ul a:hover {
+    color: #FF0000;
+}
+
+#header h1 {
+    color: white;
+}
+
+#header span {
+    color: #FF0000;
+}
+
+#hero {
     background-image: url(./img/20180519_155144.jpg);
     background-size: cover;
     background-position: top center;
@@ -77,14 +140,14 @@ p {
     z-index: -1;
 }
 
-#hero .hero{
+#hero .hero {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 50 px;
     justify-content: center;
 }
 
-#hero h1{
+#hero h1 {
     display: block;
     width: fit-content;
     font-size: 2rem;
@@ -94,7 +157,13 @@ p {
     margin: 20px;
 }
 
-#hero h2{
+#hero h2 {
+    color: #FF0000;
+    text-align: left;
+    margin: 20px;
+}
+
+#hero h3 {
     display: block;
     width: fit-content;
     font-size: 1rem;
@@ -104,12 +173,7 @@ p {
     margin: 20px;
 }
 
-#hero .piros{
-    color: #FF0000;
-    text-align: left;
-}
-
-#hero .call{
+#hero .call {
     display: inline-block;
     padding: 10px 30px;
     color: white;
@@ -124,16 +188,16 @@ p {
     margin: 20px;
 }
 
-#hero .call:hover{
+#hero .call:hover {
     color: white;
     background-color: #FF0000;
 }
 
-#service{
+#service {
     background-color: #F9FA0F;
 }
 
-#service .service{
+#service .service {
     flex-direction: column;
     text-align: center;
     max-width: 1500px;
@@ -141,7 +205,7 @@ p {
     padding: 100px 0;
 }
 
-#service .service-title{
+#service .service-title {
     font-size: 1.5rem;
     font-weight: 500;
     color: #FF0000;
@@ -151,7 +215,7 @@ p {
     text-align: center;
 }
 
-#services .service-top p{
+#services .service-top p {
     font-size: 1rem;
     margin-top: 5px;
     line-height: 2.5rem;
@@ -160,7 +224,7 @@ p {
     margin: 10px 5%;
 }
 
-#service .service-bottom{
+#service .service-bottom {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,14 +232,13 @@ p {
     margin-top: 50px;
 }
 
-#service .service-item{
+#service .service-item {
     flex-basis: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 30px;
-    border-radius: 10px;
     margin: 10px 5%;
     position: relative;
     overflow: hidden;
@@ -187,14 +250,14 @@ p {
     margin-bottom: 20px;
 }
 
-#service .service-item h3{
+#service .service-item h3 {
     font-size: 1rem;
     margin-bottom: 10px;
     text-transform: uppercase;
     color: black
 }
 
-#service .service-item p{
+#service .service-item p {
     text-align: left;
     font-size: 1rem;
     line-height: 1.9rem;
@@ -205,32 +268,58 @@ p {
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 0;
 }
 
-#references .references-header h3{
+#references .references-header {
+    padding: 200px 40px;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background-image: url(./img/IMG_20171123_111642.jpg);
+}
+
+#references .references-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .6;
+    z-index: -1;
+}
+
+#references .references-header h2 {
+    margin-bottom: 30px;
+    color: #F9FA0F;
+}
+
+#references .references-header h3 {
     margin-bottom: 30px;
     color: black;
 }
 
-#references .all-references{
+#references .all-references {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-#references .references-item{
+#references .references-item {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 80%;
+    width: 90%;
     margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
 }
 
-#references .references-info{
+#references .references-info {
     padding: 38px;
     flex-basis: 50%;
     background-color: #F9FA0F;
@@ -241,23 +330,23 @@ p {
     flex-direction: column;
 }
 
-#references .references-info h3{
+#references .references-info h3 {
     font-size: 1rem;
     color: #FF0000;
     font-weight: 500;
 }
 
-#references .references-info h4{
+#references .references-info h4 {
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
-#references .references-info p{
+#references .references-info p {
     text-align: left;
 }
 
-#references .references-img{
+#references .references-img {
     flex-basis: 50%;
     height: 300px;
     overflow: hidden;
@@ -275,16 +364,16 @@ p {
     opacity: .6;
 }
 
-#references .references-img img{
+#references .references-img img {
     transition: .3s ease transform;
 }
 
-#references .references-item:hover .references-img img{
+#references .references-item:hover .references-img img {
     transform: scale(1.1);
     /* Ezt jó lenne megfixelni - opacity: 1;*/
 }
 
-#bemutat .bemutat-container{
+#bemutat .bemutat-container {
     flex-direction: column;
     text-align: center;
     margin: 0 auto;
@@ -293,35 +382,36 @@ p {
     width: 100%;
 }
 
-#bemutat .bemutat-container{
+#bemutat .bemutat-container {
     width: 100%;
     background-color: #F9FA0F;
 }
-#bemutat .bemutat-container h3{
+
+#bemutat .bemutat-container h3 {
     font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 10px;
     letter-spacing: .2rem;
 }
 
-#bemutat .bemutat-container h4{
+#bemutat .bemutat-container h4 {
     text-align: center;
     margin-bottom: 50;
     /* Ezt nem műküdik margin-bottom: 50px; */
 }
 
-#bemutat .bemutat-container p{
+#bemutat .bemutat-container p {
     text-align: center;
 }
 
-#contact .contact{
+#contact .contact {
     flex-direction: column;
     width: 100%;
     margin: 0 auto;
     background-color: #4E4949;
 }
 
-#contact .section-title{
+#contact .section-title {
     color: white;
     margin: 50px;
     font-weight: 500;
@@ -329,17 +419,15 @@ p {
     letter-spacing: .2rem;
 }
 
-#contact .contact-items{
+#contact .contact-items {
     width: 400px;
 }
 
-#contact .contact-item{
-    width: 80%;
-    padding: 20px;
+#contact .contact-item {
     text-align: center;
     color: white;
     border: 2px solid #FF0000;
-    padding: 30px;
+    padding: 5px;
     margin: 30px;
     display: flex;
     justify-content: center;
@@ -347,103 +435,144 @@ p {
     align-items: center;
 }
 
-#contact .contact-item:hover{
+#contact .contact-item:hover {
     color: white;
     background-color: #FF0000;
 }
 
-
-#contact .icon{
-    width: 70px;
+#contact .icon {
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
 }
 
-#contact .contact-info h3{
+#contact .contact-info h3 {
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
-#contact .contact-info h3{
-    font-size: 0.7rem;
-    font-weight: 500;
-}
-
-#footer{
+#footer {
     background-color: #F9FA0F;
 }
 
-#footer .footer{
+#footer .footer {
     min-height: 200px;
     flex-direction: column;
     padding-top: 50px;
     padding-bottom: 10px;
 }
 
-#footer .social-icon{
+#footer .social-icon {
     display: flex;
     margin-bottom: 30px;
 }
 
-#footer .social-item{
+#footer .social-item {
     height: 20px;
     width: 20px;
     margin-bottom: 0 5px;
 }
 
-#footer p{
+#footer p {
     color: black;
     font-size: 0.5rem;
 }
 
+
 /* Reszponzivitás - Tabletnek (betűméreteket nem állítottam át)*/
 
-@media only screen and (min-width: 768px){
-
-#service .service-bottom .service-item{
-    flex-basis: 45%;
-    margin: 2.5%;
+@media only screen and (min-width: 768px) {
+    #service .service-bottom .service-item {
+        flex-basis: 45%;
+        margin: 2.5%;
+        flex-direction: column;
+    }
+    #references .references {
+        padding-bottom: 0;
+    }
+    #references .references-item {
+        flex-direction: row;
+    }
+    #references .references-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    #references .references-item {
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #references .all-references .references-info {
+        height: 100%;
+        margin: 0;
+    }
+    #references .all-references .references-img {
+        height: 100%;
+        margin: 0;
+    }
+    #contact .contact {
+        flex-direction: column;
+        padding: 100px 0;
+        align-items: center;
+        justify-content: center;
+        min-width: 20vh;
+    }
+    #contact .contact-items {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        margin: 0;
+    }
+    #contact .contact-item {
+        margin: 20px;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+    #contact .contact-item .icon {
+        height: 80px;
+        width: 80px;
+        align-items: center;
+    }
+    #contact .contact-item .contact-info h4 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }
 
-#references .references{
-    padding-bottom: 0;
-}
-
-#references .references-item{
-    flex-direction: row;
-}
-
-#references .references-item:nth-child(even){
-    flex-direction: row-reverse;
-}
-
-#references .references-item{
-    height: 400px;
-    margin: 0;
-    width: 100%;
-    border-radius: 0;
-}
-
-#references .all-references .references-info{
-    height: 100%;
-    margin: 0;
-}
-#references .all-references .references-img{
-    height: 100%;
-    margin: 0;
-}
-
-#contact .contact{
-    flex-direction: column;
-    padding: 100px 0;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-#contact .contact-items{
-    width: 100%;
-    display: flex;
-    flex-direction: inline;
+@media only screen and (min-width: 1200px) {
+    #service .service-bottom .service-item {
+        flex-basis: 22%;
+        margin: 1.5%;
+        flex-direction: column;
+    }
+    #service .service-top {
+        width: 500px;
+        max-width: 0 auto;
+    }
+    #references .references {
+        padding-bottom: 0;
+    }
+    #references .references-item {
+        flex-direction: row;
+    }
+    #references .references-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    #references .references-item {
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #references .all-references .references-info {
+        height: 100%;
+        margin: 0;
+    }
+    #references .all-references .references-img {
+        height: 100%;
+        margin: 0;
+    }
 }
