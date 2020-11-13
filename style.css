@@ -8,6 +8,7 @@
     html {
         font-size: 20px;
         font-family: "Montserrat", sans-serif;
+        scroll-behavior: smooth;
     }
     
     a {
@@ -50,7 +51,7 @@
     .brand h3 {
         font-size: 1rem;
         text-transform: uppercase;
-        color: black;
+        color: white;
     }
     
     .brand h3 span {
@@ -187,6 +188,7 @@
     #header span {
         color: #FF0000;
     }
+    /*Főoldal része*/
     
     #hero {
         background-image: url(./img/20180519_155144.jpg);
@@ -260,6 +262,7 @@
         color: white;
         background-color: #FF0000;
     }
+    /*Szolgáltatás rész*/
     
     #service {
         background-color: #F9FA0F;
@@ -346,7 +349,8 @@
         width: 100%;
         position: relative;
         z-index: 1;
-        background-image: url(./img/IMG_20171123_111642.jpg);
+        background-image: url(./img/const.jpg);
+        background-size: cover;
     }
     
     #references .references-header::after {
@@ -448,13 +452,23 @@
         text-align: center;
         margin: 0 auto;
         padding: 300px 20px;
-        background-color: #F9FA0F;
+        background-image: url(./img/pexels-nicole-rathmayr-220885.jpg);
+        z-index: 1;
+        position: relative;
         width: 100%;
+        background-size: cover;
     }
     
-    #bemutat .bemutat-container {
+    #bemutat .bemutat-container::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
         width: 100%;
-        background-color: #F9FA0F;
+        background-color: black;
+        opacity: .6;
+        z-index: -1;
     }
     
     #bemutat .bemutat-container h3 {
@@ -462,23 +476,26 @@
         font-weight: 500;
         margin-bottom: 10px;
         letter-spacing: .2rem;
+        color: #F9FA0F;
     }
     
     #bemutat .bemutat-container h4 {
         text-align: center;
-        margin-bottom: 50;
-        /* Ezt nem műküdik margin-bottom: 50px; */
+        margin-bottom: 20px;
+        color: white;
     }
     
     #bemutat .bemutat-container p {
         text-align: center;
+        color: white;
     }
+    /*Kapcsolatok rész */
     
     #contact .contact {
         flex-direction: column;
         width: 100%;
         margin: 0 auto;
-        background-color: #4E4949;
+        background-color: #F9FA0F;
     }
     
     #contact .section-title {
@@ -520,9 +537,10 @@
         font-weight: 500;
         margin-bottom: 5px;
     }
+    /*Footer rész*/
     
     #footer {
-        background-color: #F9FA0F;
+        background-color: rgb(31, 30, 30);
     }
     
     #footer .footer {
@@ -534,20 +552,21 @@
     
     #footer .social-icon {
         display: flex;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     
     #footer .social-item {
-        height: 20px;
-        width: 20px;
+        height: 15px;
+        width: 15px;
         margin-bottom: 0 5px;
+        margin: 10px;
     }
     
     #footer p {
-        color: black;
+        color: white;
         font-size: 0.5rem;
     }
-    /* Keyframes - ezt meffixelni ez nem működik */
+    /* Keyframes - ezt megfixelni ez nem működik */
     
     @keyframes menu_puls {
         0% {
@@ -653,6 +672,7 @@
             width: 500px;
             max-width: 0 auto;
         }
+        /*Referenciák rész - Megfixelni!*/
         #references .references {
             padding-bottom: 0;
         }
