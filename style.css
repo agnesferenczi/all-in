@@ -1,578 +1,679 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 20px;
-    font-family: "Montserrat", sans-serif;
-}
-
-a {
-    text-decoration: none;
-}
-
-.container {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-p {
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.9rem;
-    color: black;
-    letter-spacing: .05rem;
-    margin-top: 5px;
-}
-
-.section-title {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #FF0000;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    text-align: center;
-}
-
-.brand h3 {
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: black;
-}
-
-.brand h3 span {
-    color: #FF0000;
-}
-
-#header {
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: auto;
-}
-
-#header .header {
-    min-height: 8vh;
-    background-color: rgb(31, 30, 30, 0.24)
-}
-
-.header .nav-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    max-width: 1300px;
-    padding: 0 10px;
-}
-
-#header .nav-list ul {
-    list-style: none;
-    position: absolute;
-    background-color: rgb(31, 30, 30);
-    width: 100vh;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    overflow-x: hidden;
-    flex-direction: column;
-}
-
-#header .nav-list ul a {
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: .2rem;
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    padding: 20px;
-    display: block;
-}
-
-#header .nav-list ul a:hover {
-    color: #FF0000;
-}
-
-#header h1 {
-    color: white;
-}
-
-#header span {
-    color: #FF0000;
-}
-
-#hero {
-    background-image: url(./img/20180519_155144.jpg);
-    background-size: cover;
-    background-position: top center;
-    position: relative;
-    z-index: 1;
-}
-
-#hero::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: .6;
-    z-index: -1;
-}
-
-#hero .hero {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 50 px;
-    justify-content: center;
-}
-
-#hero h1 {
-    display: block;
-    width: fit-content;
-    font-size: 2rem;
-    position: relative;
-    color: #F9FA0F;
-    text-align: left;
-    margin: 20px;
-}
-
-#hero h2 {
-    color: #FF0000;
-    text-align: left;
-    margin: 20px;
-}
-
-#hero h3 {
-    display: block;
-    width: fit-content;
-    font-size: 1rem;
-    position: relative;
-    color: white;
-    text-align: center;
-    margin: 20px;
-}
-
-#hero .call {
-    display: inline-block;
-    padding: 10px 30px;
-    color: white;
-    background-color: transparent;
-    border: 2px solid #FF0000;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    margin-top: 30px;
-    transition: .3s ease;
-    transition-property: background-color, color;
-    margin: 20px;
-}
-
-#hero .call:hover {
-    color: white;
-    background-color: #FF0000;
-}
-
-#service {
-    background-color: #F9FA0F;
-}
-
-#service .service {
-    flex-direction: column;
-    text-align: center;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 100px 0;
-}
-
-#service .service-title {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #FF0000;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    text-align: center;
-}
-
-#services .service-top p {
-    font-size: 1rem;
-    margin-top: 5px;
-    line-height: 2.5rem;
-    font-weight: 300px;
-    letter-spacing: .05rem;
-    margin: 10px 5%;
-}
-
-#service .service-bottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 50px;
-}
-
-#service .service-item {
-    flex-basis: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 30px;
-    margin: 10px 5%;
-    position: relative;
-    overflow: hidden;
-}
-
-#service .service-bottom .icon {
-    height: 50px;
-    width: 50px;
-    margin-bottom: 20px;
-}
-
-#service .service-item h3 {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    color: black
-}
-
-#service .service-item p {
-    text-align: left;
-    font-size: 1rem;
-    line-height: 1.9rem;
-    color: black;
-}
-
-#references .references {
-    flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
-}
-
-#references .references-header {
-    padding: 200px 40px;
-    margin: 0;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    background-image: url(./img/IMG_20171123_111642.jpg);
-}
-
-#references .references-header::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: .6;
-    z-index: -1;
-}
-
-#references .references-header h2 {
-    margin-bottom: 30px;
-    color: #F9FA0F;
-}
-
-#references .references-header h3 {
-    margin-bottom: 30px;
-    color: black;
-}
-
-#references .all-references {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#references .references-item {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 90%;
-    margin: 20px auto;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-#references .references-info {
-    padding: 38px;
-    flex-basis: 50%;
-    background-color: #F9FA0F;
-    height: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#references .references-info h3 {
-    font-size: 1rem;
-    color: #FF0000;
-    font-weight: 500;
-}
-
-#references .references-info h4 {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-
-#references .references-info p {
-    text-align: left;
-}
-
-#references .references-img {
-    flex-basis: 50%;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
-}
-
-#references .references-img:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: .6;
-}
-
-#references .references-img img {
-    transition: .3s ease transform;
-}
-
-#references .references-item:hover .references-img img {
-    transform: scale(1.1);
-    /* Ezt jó lenne megfixelni - opacity: 1;*/
-}
-
-#bemutat .bemutat-container {
-    flex-direction: column;
-    text-align: center;
-    margin: 0 auto;
-    padding: 300px 20px;
-    background-color: #F9FA0F;
-    width: 100%;
-}
-
-#bemutat .bemutat-container {
-    width: 100%;
-    background-color: #F9FA0F;
-}
-
-#bemutat .bemutat-container h3 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 10px;
-    letter-spacing: .2rem;
-}
-
-#bemutat .bemutat-container h4 {
-    text-align: center;
-    margin-bottom: 50;
-    /* Ezt nem műküdik margin-bottom: 50px; */
-}
-
-#bemutat .bemutat-container p {
-    text-align: center;
-}
-
-#contact .contact {
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
-    background-color: #4E4949;
-}
-
-#contact .section-title {
-    color: white;
-    margin: 50px;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: .2rem;
-}
-
-#contact .contact-items {
-    width: 400px;
-}
-
-#contact .contact-item {
-    text-align: center;
-    color: white;
-    border: 2px solid #FF0000;
-    padding: 5px;
-    margin: 30px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-#contact .contact-item:hover {
-    color: white;
-    background-color: #FF0000;
-}
-
-#contact .icon {
-    margin: 0 auto;
-    margin-bottom: 3px;
-}
-
-#contact .contact-info h3 {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-
-#footer {
-    background-color: #F9FA0F;
-}
-
-#footer .footer {
-    min-height: 200px;
-    flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 10px;
-}
-
-#footer .social-icon {
-    display: flex;
-    margin-bottom: 30px;
-}
-
-#footer .social-item {
-    height: 20px;
-    width: 20px;
-    margin-bottom: 0 5px;
-}
-
-#footer p {
-    color: black;
-    font-size: 0.5rem;
-}
-
-
-/* Reszponzivitás - Tabletnek (betűméreteket nem állítottam át)*/
-
-@media only screen and (min-width: 768px) {
-    #service .service-bottom .service-item {
-        flex-basis: 45%;
-        margin: 2.5%;
-        flex-direction: column;
-    }
-    #references .references {
-        padding-bottom: 0;
-    }
-    #references .references-item {
-        flex-direction: row;
-    }
-    #references .references-item:nth-child(even) {
-        flex-direction: row-reverse;
-    }
-    #references .references-item {
-        height: 400px;
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
+    * {
+        padding: 0;
         margin: 0;
-        width: 100%;
-        border-radius: 0;
+        box-sizing: border-box;
     }
-    #references .all-references .references-info {
-        height: 100%;
-        margin: 0;
+    
+    html {
+        font-size: 20px;
+        font-family: "Montserrat", sans-serif;
     }
-    #references .all-references .references-img {
-        height: 100%;
-        margin: 0;
+    
+    a {
+        text-decoration: none;
     }
-    #contact .contact {
-        flex-direction: column;
-        padding: 100px 0;
-        align-items: center;
-        justify-content: center;
-        min-width: 20vh;
-    }
-    #contact .contact-items {
+    
+    .container {
+        min-height: 100vh;
         width: 100%;
         display: flex;
-        flex-direction: row;
-        padding: 20px;
-        margin: 0;
-    }
-    #contact .contact-item {
-        margin: 20px;
-        flex-direction: column;
         align-items: center;
-        flex-grow: 1;
-        flex-basis: 0;
+        justify-content: center;
     }
-    #contact .contact-item .icon {
-        height: 80px;
-        width: 80px;
-        align-items: center;
+    
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
-    #contact .contact-item .contact-info h4 {
+    
+    p {
         text-align: center;
+        font-size: 1rem;
+        line-height: 1.9rem;
+        color: black;
+        letter-spacing: .05rem;
+        margin-top: 5px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #FF0000;
         margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        text-align: center;
     }
-}
-
-@media only screen and (min-width: 1200px) {
-    #service .service-bottom .service-item {
-        flex-basis: 22%;
-        margin: 1.5%;
+    
+    .brand h3 {
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: black;
+    }
+    
+    .brand h3 span {
+        color: #FF0000;
+    }
+    
+    #header {
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: auto;
+    }
+    
+    #header .header {
+        min-height: 8vh;
+        background-color: rgb(31, 30, 30, 0.24);
+        transition: .3s ease background-color;
+    }
+    
+    .header .nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        max-width: 1300px;
+        padding: 0 10px;
+    }
+    
+    #header .nav-list ul {
+        list-style: none;
+        position: absolute;
+        background-color: rgb(31, 30, 30);
+        width: 100vw;
+        height: 100vh;
+        left: 100%;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        overflow-x: hidden;
         flex-direction: column;
+        transition: .5s ease left;
     }
-    #service .service-top {
-        width: 500px;
-        max-width: 0 auto;
+    
+    #header .nav-list ul.active {
+        left: 0;
     }
+    
+    #header .nav-list ul a {
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: .2rem;
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        padding: 20px;
+        display: block;
+    }
+    
+    #header .nav-list ul a:hover {
+        color: #FF0000;
+    }
+    
+    #header .menu {
+        height: 60px;
+        width: 60px;
+        display: inline-block;
+        border: 3px solid white;
+        border-radius: 50%;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 100;
+        transform: scale(.8);
+        margin-right: 20px;
+    }
+    
+    #header .menu:after {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        border: 3px solid white;
+        animation: menu-puls .1s ease infinite;
+    }
+    
+    #header .menu .bar {
+        height: 2px;
+        width: 30px;
+        position: relative;
+        background-color: white;
+        z-index: -1;
+    }
+    
+    #header .menu .bar::after,
+    #header .menu .bar::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        background-color: white;
+        transition: .3s ease;
+        transition-property: top, bottom;
+    }
+    
+    #header .menu .bar::after {
+        top: 8px;
+    }
+    
+    #header .menu .bar::before {
+        bottom: 8px;
+    }
+    
+    #header .menu.active .bar::before {
+        bottom: 0;
+    }
+    
+    #header .menu.active .bar::after {
+        top: 0;
+    }
+    
+    #header h1 {
+        color: white;
+    }
+    
+    #header span {
+        color: #FF0000;
+    }
+    
+    #hero {
+        background-image: url(./img/20180519_155144.jpg);
+        background-size: cover;
+        background-position: top center;
+        position: relative;
+        z-index: 1;
+    }
+    
+    #hero::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        opacity: .6;
+        z-index: -1;
+    }
+    
+    #hero .hero {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 50 px;
+        justify-content: center;
+    }
+    
+    #hero h1 {
+        display: block;
+        width: fit-content;
+        font-size: 2rem;
+        position: relative;
+        color: #F9FA0F;
+        text-align: left;
+        margin: 20px;
+    }
+    
+    #hero h2 {
+        color: #FF0000;
+        text-align: left;
+        margin: 20px;
+    }
+    
+    #hero h3 {
+        display: block;
+        width: fit-content;
+        font-size: 1rem;
+        position: relative;
+        color: white;
+        text-align: center;
+        margin: 20px;
+    }
+    
+    #hero .call {
+        display: inline-block;
+        padding: 10px 30px;
+        color: white;
+        background-color: transparent;
+        border: 2px solid #FF0000;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        margin-top: 30px;
+        transition: .3s ease;
+        transition-property: background-color, color;
+        margin: 20px;
+    }
+    
+    #hero .call:hover {
+        color: white;
+        background-color: #FF0000;
+    }
+    
+    #service {
+        background-color: #F9FA0F;
+    }
+    
+    #service .service {
+        flex-direction: column;
+        text-align: center;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 100px 0;
+    }
+    
+    #service .service-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #FF0000;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        text-align: center;
+    }
+    
+    #services .service-top p {
+        font-size: 1rem;
+        margin-top: 5px;
+        line-height: 2.5rem;
+        font-weight: 300px;
+        letter-spacing: .05rem;
+        margin: 10px 5%;
+    }
+    
+    #service .service-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+    
+    #service .service-item {
+        flex-basis: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 30px;
+        margin: 10px 5%;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    #service .service-bottom .icon {
+        height: 50px;
+        width: 50px;
+        margin-bottom: 20px;
+    }
+    
+    #service .service-item h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        color: black
+    }
+    
+    #service .service-item p {
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.9rem;
+        color: black;
+    }
+    /*Referencia rész */
+    
     #references .references {
-        padding-bottom: 0;
+        flex-direction: column;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
     }
-    #references .references-item {
-        flex-direction: row;
-    }
-    #references .references-item:nth-child(even) {
-        flex-direction: row-reverse;
-    }
-    #references .references-item {
-        height: 400px;
+    
+    #references .references-header {
+        padding: 200px 40px;
         margin: 0;
         width: 100%;
-        border-radius: 0;
+        position: relative;
+        z-index: 1;
+        background-image: url(./img/IMG_20171123_111642.jpg);
     }
-    #references .all-references .references-info {
+    
+    #references .references-header::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
         height: 100%;
-        margin: 0;
+        width: 100%;
+        background-color: black;
+        opacity: .6;
+        z-index: -1;
     }
-    #references .all-references .references-img {
+    
+    #references .references-header h2 {
+        margin-bottom: 30px;
+        color: #F9FA0F;
+    }
+    
+    #references .references-header h3 {
+        margin-bottom: 30px;
+        color: black;
+    }
+    
+    #references .all-references {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    #references .references-item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    
+    #references .references-info {
+        padding: 38px;
+        flex-basis: 50%;
+        background-color: #F9FA0F;
         height: 100%;
-        margin: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
     }
-}
+    
+    #references .references-info h3 {
+        font-size: 1rem;
+        color: #FF0000;
+        font-weight: 500;
+    }
+    
+    #references .references-info h4 {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    
+    #references .references-info p {
+        text-align: left;
+    }
+    
+    #references .references-img {
+        flex-basis: 50%;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    #references .references-img:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        opacity: .6;
+    }
+    
+    #references .references-img img {
+        transition: .3s ease transform;
+    }
+    
+    #references .references-item:hover .references-img img {
+        transform: scale(1.1);
+        /* Ezt jó lenne megfixelni - opacity: 1;*/
+    }
+    /*Bemutatkozás rész*/
+    
+    #bemutat .bemutat-container {
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+        padding: 300px 20px;
+        background-color: #F9FA0F;
+        width: 100%;
+    }
+    
+    #bemutat .bemutat-container {
+        width: 100%;
+        background-color: #F9FA0F;
+    }
+    
+    #bemutat .bemutat-container h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+        letter-spacing: .2rem;
+    }
+    
+    #bemutat .bemutat-container h4 {
+        text-align: center;
+        margin-bottom: 50;
+        /* Ezt nem műküdik margin-bottom: 50px; */
+    }
+    
+    #bemutat .bemutat-container p {
+        text-align: center;
+    }
+    
+    #contact .contact {
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        background-color: #4E4949;
+    }
+    
+    #contact .section-title {
+        color: white;
+        margin: 50px;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: .2rem;
+    }
+    
+    #contact .contact-items {
+        width: 400px;
+    }
+    
+    #contact .contact-item {
+        text-align: center;
+        color: white;
+        border: 2px solid #FF0000;
+        padding: 5px;
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #contact .contact-item:hover {
+        color: white;
+        background-color: #FF0000;
+    }
+    
+    #contact .icon {
+        margin: 0 auto;
+        margin-bottom: 3px;
+    }
+    
+    #contact .contact-info h3 {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    
+    #footer {
+        background-color: #F9FA0F;
+    }
+    
+    #footer .footer {
+        min-height: 200px;
+        flex-direction: column;
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+    
+    #footer .social-icon {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    
+    #footer .social-item {
+        height: 20px;
+        width: 20px;
+        margin-bottom: 0 5px;
+    }
+    
+    #footer p {
+        color: black;
+        font-size: 0.5rem;
+    }
+    /* Keyframes - ezt meffixelni ez nem működik */
+    
+    @keyframes menu_puls {
+        0% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: scale (1.5);
+        }
+    }
+    /* Reszponzivitás - Tabletnek (betűméreteket nem állítottam át)*/
+    
+    @media only screen and (min-width: 768px) {
+        #service .service-bottom .service-item {
+            flex-basis: 45%;
+            margin: 2.5%;
+            flex-direction: column;
+        }
+        #references .references {
+            padding-bottom: 0;
+        }
+        #references .references-item {
+            flex-direction: row;
+        }
+        #references .references-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        #references .references-item {
+            height: 400px;
+            margin: 0;
+            width: 100%;
+            border-radius: 0;
+        }
+        #references .all-references .references-info {
+            height: 100%;
+            margin: 0;
+        }
+        #references .all-references .references-img {
+            height: 100%;
+            margin: 0;
+        }
+        #contact .contact {
+            flex-direction: column;
+            padding: 100px 0;
+            align-items: center;
+            justify-content: center;
+            min-width: 20vh;
+        }
+        #contact .contact-items {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+            margin: 0;
+        }
+        #contact .contact-item {
+            margin: 20px;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+        #contact .contact-item .icon {
+            height: 80px;
+            width: 80px;
+            align-items: center;
+        }
+        #contact .contact-item .contact-info h4 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+    
+    @media only screen and (min-width: 1200px) {
+        #header .menu {
+            display: none;
+        }
+        #header .nav-list ul {
+            position: initial;
+            display: block;
+            height: auto;
+            width: fit-content;
+            background-color: transparent;
+        }
+        #header .nav-list ul li {
+            display: inline-block;
+        }
+        #header .nav-list ul li a {
+            font-size: 0.6rem;
+            font-weight: bold;
+            letter-spacing: 0.1rem;
+        }
+        #header .nav-list ul a:after {
+            display: none;
+        }
+        #service .service-bottom .service-item {
+            flex-basis: 22%;
+            margin: 1.5%;
+            flex-direction: column;
+        }
+        #service .service-top {
+            width: 500px;
+            max-width: 0 auto;
+        }
+        #references .references {
+            padding-bottom: 0;
+        }
+        #references .references-item {
+            flex-direction: row;
+        }
+        #references .references-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        #references .references-item {
+            height: 400px;
+            margin: 0;
+            width: 100%;
+            border-radius: 0;
+        }
+        #references .all-references .references-info {
+            height: 100%;
+            margin: 0;
+        }
+        #references .all-references .references-img {
+            height: 100%;
+            margin: 0;
+        }
+    }
