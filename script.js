@@ -23,5 +23,3 @@ men_item.forEach((item) => {
         mobile_menu.classList.toggle('active');
     });
 });
-
-/* Megfixelni ezt a fenti men-item-es hibát! */

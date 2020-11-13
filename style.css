@@ -33,7 +33,7 @@
         text-align: center;
         font-size: 1rem;
         line-height: 1.9rem;
-        color: black;
+        color: #1f1e1e;
         letter-spacing: .05rem;
         margin-top: 5px;
     }
@@ -57,6 +57,7 @@
     .brand h3 span {
         color: #FF0000;
     }
+    /*Menüsor része*/
     
     #header {
         position: fixed;
@@ -142,7 +143,7 @@
         width: 100%;
         border-radius: 50%;
         border: 3px solid white;
-        animation: menu-puls .1s ease infinite;
+        animation: menu_puls 1s ease infinite;
     }
     
     #header .menu .bar {
@@ -220,27 +221,50 @@
     #hero h1 {
         display: block;
         width: fit-content;
-        font-size: 2rem;
+        font-size: 1.5rem;
         position: relative;
-        color: #F9FA0F;
+        color: transparent;
+        animation: text_reveal .4s ease forwards;
+        animation-delay: 1s;
         text-align: left;
         margin: 20px;
     }
     
-    #hero h2 {
-        color: #FF0000;
-        text-align: left;
-        margin: 20px;
+    #hero h1:nth-child(1) {
+        animation-delay: 1s;
     }
     
-    #hero h3 {
-        display: block;
-        width: fit-content;
-        font-size: 1rem;
-        position: relative;
-        color: white;
-        text-align: center;
-        margin: 20px;
+    #hero h1:nth-child(2) {
+        animation: text_reveal_text .4s ease forwards;
+        animation-delay: 2s;
+    }
+    
+    #hero h1:nth-child(3) {
+        animation: text_reveal_name .4s ease forwards;
+        animation-delay: 3s;
+    }
+    
+    #hero h1 span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        background-color: #F9FA0F;
+        animation: text_reveal_box 1s ease;
+        animation-delay: .3s;
+    }
+    
+    #hero h1:nth-child(1) span {
+        animation-delay: 0.5s;
+    }
+    
+    #hero h1:nth-child(2) span {
+        animation-delay: 1.5s;
+    }
+    
+    #hero h1:nth-child(3) span {
+        animation-delay: 2.5s;
     }
     
     #hero .call {
@@ -325,14 +349,14 @@
         font-size: 1rem;
         margin-bottom: 10px;
         text-transform: uppercase;
-        color: black
+        color: #1f1e1e;
     }
     
     #service .service-item p {
         text-align: left;
         font-size: 1rem;
         line-height: 1.9rem;
-        color: black;
+        color: #1f1e1e;
     }
     /*Referencia rész */
     
@@ -372,7 +396,7 @@
     
     #references .references-header h3 {
         margin-bottom: 30px;
-        color: black;
+        color: #1f1e1e;
     }
     
     #references .all-references {
@@ -499,7 +523,7 @@
     }
     
     #contact .section-title {
-        color: white;
+        color: rgb(31, 30, 30);
         margin: 50px;
         font-weight: 500;
         text-align: center;
@@ -512,19 +536,20 @@
     
     #contact .contact-item {
         text-align: center;
-        color: white;
-        border: 2px solid #FF0000;
+        color: rgb(31, 30, 30);
+        background-color: white;
         padding: 5px;
         margin: 30px;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        box-shadow: 0px 0px 18px #0000002c;
+        transition: .3 ease box-shadow;
     }
     
     #contact .contact-item:hover {
-        color: white;
-        background-color: #FF0000;
+        box-shadow: 0px 0px 4px 0 #0000002c;
     }
     
     #contact .icon {
@@ -534,8 +559,12 @@
     
     #contact .contact-info h3 {
         font-size: 1rem;
-        font-weight: 500;
+        font-weight: bold;
         margin-bottom: 5px;
+    }
+    
+    #contact .contact-info h4 {
+        font-size: 0.7rem;
     }
     /*Footer rész*/
     
@@ -576,6 +605,36 @@
         100% {
             opacity: 0;
             transform: scale (1.5);
+        }
+    }
+    /*Főoldalon lévő szöveg Kexwordse*/
+    
+    @keyframes text_reveal_box {
+        50% {
+            width: 100%;
+            left: 0;
+        }
+        100% {
+            width: 0;
+            left: 100%;
+        }
+    }
+    
+    @keyframes text_reveal {
+        100% {
+            color: white;
+        }
+    }
+    
+    @keyframes text_reveal_text {
+        100% {
+            color: #FF0000;
+        }
+    }
+    
+    @keyframes text_reveal_name {
+        100% {
+            color: #F9FA0F;
         }
     }
     /* Reszponzivitás - Tabletnek (betűméreteket nem állítottam át)*/
@@ -631,9 +690,10 @@
             flex-basis: 0;
         }
         #contact .contact-item .icon {
-            height: 80px;
+            height: 20px;
             width: 80px;
             align-items: center;
+            margin: 20px;
         }
         #contact .contact-item .contact-info h4 {
             text-align: center;
